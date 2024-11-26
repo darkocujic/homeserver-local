@@ -4,9 +4,10 @@ Complete home media and networking setup with config files and additional detail
 
 ## Instructions
 
-1. Copy `.env.sample` to `.env`
-2. Populate values
-3. Start services with
+1. Enter a folder of a service `cd homepage`
+2. Start services with `docker compose up -d`
+
+Additional configurations might be available in each respective folder, use at will.
 
 ## Notices
 
