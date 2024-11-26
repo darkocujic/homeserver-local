@@ -1,0 +1,19 @@
+---
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "1234:80/tcp"
+    environment:
+      TZ: 'Europe/Zagreb'
+      WEBPASSWORD: ${WEBPASSWORD}
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
