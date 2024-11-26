@@ -8,6 +8,15 @@
           url: http://192.168.0.253:1234
           version: 5 # required if running v6 or higher, defaults to 5
           key: # optional, in v6 can be your password or app password
+    - Nginx Proxy Manager:
+        href: http://192.168.0.253:8081
+        icon: nginx-proxy-manager.png
+        description: Nginx
+        widget:
+          type: npm
+          url: http://192.168.0.253:81
+          username:
+          password:
     - QBitTorrent:
         href: http://192.168.0.253:8080
         icon: qbittorrent.png
