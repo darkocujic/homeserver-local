@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  plex:
+    container_name: plex
+    image: plexinc/pms-docker
+    restart: unless-stopped
+    environment:
+      - TZ="Europe/Zagreb"
+      - PUID=1000
+      - PGID=1000
+      - ALLOWED_NETWORKS=192.168.0.0/16,172.0.0.0/8
+    network_mode: host
+    volumes:
+      - ./data:/config
+      - ./transcode:/transcode
+      - ~/media:/data
+    ports:
+      - 32400:32400/tcp
