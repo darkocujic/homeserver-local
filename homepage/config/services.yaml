@@ -1,0 +1,73 @@
+- Networking:
+    - Pihole:
+        href: http://192.168.0.253:1234/admin
+        icon: pi-hole.png
+        description: Block ads and tracking
+        widget:
+          type: pihole
+          url: http://192.168.0.253:1234
+          version: 5 # required if running v6 or higher, defaults to 5
+          key: # optional, in v6 can be your password or app password
+    - QBitTorrent:
+        href: http://192.168.0.253:8080
+        icon: qbittorrent.png
+        description: Torrent client
+        widgets:
+          type: qbittorrent
+          url: http://qbittorrent.host.or.ip
+          username:
+          password:
+
+- Media:
+    - Plex:
+        href: http://192.168.0.253:32400/web
+        description: Plex media server
+        icon: plex.png
+        widget:
+          type: plex
+          url: http://192.168.0.253:32400
+          key:
+
+- Media Management:
+    - Overseerr:
+        href: http://192.168.0.253:5055
+        icon: overseerr.png
+        description: Media request manager
+        widget:
+          type: overseerr
+          url: http://192.168.0.253:5055
+          key:
+    - Sonarr:
+        href: http://192.168.0.253:8989
+        description: TV Shows manager
+        icon: sonarr.png
+        widget:
+          type: sonarr
+          url: http://192.168.0.253:8989
+          key:
+          enableQueue: true # optional, defaults to false
+    - Radarr:
+        href: http://192.168.0.253:7878
+        description: Movies manager
+        icon: radarr.png
+        widget:
+          type: radarr
+          url: http://192.168.0.253:7878
+          key:
+          enableQueue: true # optional, defaults to false
+    - Bazarr:
+        href: http://192.168.0.253:6767
+        description: Subtitles manager
+        icon: bazarr.png
+        widget:
+          type: bazarr
+          url: http://192.168.0.253:6767
+          key:
+    - Prowlarr:
+        href: http://192.168.0.253:9696
+        description: Indexer manager
+        icon: prowlarr.png
+        widget:
+          type: prowlarr
+          url: http://192.168.0.253:9696
+          key:
