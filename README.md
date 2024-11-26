@@ -4,6 +4,7 @@ Complete home media and networking setup with config files and additional detail
 
 ## Instructions
 
+0. Ensure you have Docker and that you can run it as user
 1. Enter a folder of a service `cd homepage`
 2. Start services with `docker compose up -d`
 
